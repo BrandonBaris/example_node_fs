@@ -1,0 +1,12 @@
+doctype
+html(lang="en")
+head
+  meta(charset="UTF-8")
+  title List Files
+body
+  ul
+    each file in files
+      li
+        a( href = "file/#{file}")= file
+  a( href = "new_file" )
+    button New File
