@@ -1,5 +1,5 @@
 var fs = require('fs');
-var express = require('express')
+var express = require('express');
 var app = express();
 var bodyParser = require('body-parser');
 var SAVE_DIR = 'saved_files/';
@@ -8,12 +8,12 @@ app.set( 'view engine', 'jade' );
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.get('/', function (req, res) {
-  res.send('Hello World!')
-})
+  res.send('Hello World!');
+});
 
 app.get('/new_file', function (req, res) {
   res.render('new_file');
-})
+});
 
 // ------
 app.post('/create_file', function (req, res) {
@@ -52,9 +52,9 @@ app.get('/file/:name', function (req, res) {
 
 var server = app.listen(3000, function () {
 
-  var host = server.address().address
-  var port = server.address().port
+  var host = server.address().address;
+  var port = server.address().port;
 
-  console.log('Example app listening at http://%s:%s', host, port)
+  console.log('Example app listening at http://%s:%s', host, port);
 
 });
